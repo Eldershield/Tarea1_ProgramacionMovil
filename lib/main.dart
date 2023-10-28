@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Operaciones Artimeticas'),
+        title: const Text('Operaciones Artimeticas'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -67,12 +67,12 @@ class _HomePageState extends State<HomePage> {
             TextField(
               controller: ctrlNum1,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "Primer Numero"),
+              decoration: const InputDecoration(labelText: "Primer Numero"),
             ),
             TextField(
               controller: ctrlNum2,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "Segundo Numero"),
+              decoration: const InputDecoration(labelText: "Segundo Numero"),
             ),
             DropdownButton<String>(
               value: operacion,
@@ -91,9 +91,9 @@ class _HomePageState extends State<HomePage> {
             ),
             ElevatedButton(
               onPressed: Calcular,
-              child: Text('Calcular'),
+              child: const Text('Calcular'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(Resultado),
           ],
         ),
